@@ -1,0 +1,970 @@
+body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #f1f2f4;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+}
+
+.jstree-default .jstree-anchor {
+    height: 55px !important;
+    padding: 5px;
+}
+
+.jstree-default .jstree-hovered {background: transparent !important;border: none;box-shadow: inset 0 0 0px #ccc !important;color: #1559a7 !important;}
+
+.yanmenu {
+    height: 100%;
+    background: rgb(0, 172, 238);
+    background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(34, 68, 131, 1) 100%);
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow-y: scroll;
+    padding-top: 2vh;
+    width: 140px;
+    z-index: 10;
+}
+
+.yanmenu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.yanmenu ul li {
+    display: block;
+    padding: 0 10px;
+    position: relative;
+
+}
+
+.yanmenu ul li:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.5s;
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #000000;
+    opacity: 0;
+    z-index: -1;
+}
+
+.yanmenu ul li:hover:after {
+    opacity: 1;
+}
+
+.yanmenu ul li:last-child a {
+    border-bottom: none;
+}
+
+.yanmenu ul li a {
+    font-family: 'Oswald';
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
+    /* border-bottom: 1px solid; */
+}
+
+.yanmenu ul li i {
+    font-size: 40px;
+    display: block;
+    padding: 15px;
+}
+
+.Sayfa {
+    margin-left: 140px;
+    margin-top: 110px;
+}
+
+.header {
+    font-family: 'Oswald';
+    background: #fff;
+    box-shadow: 1px 1px 11px 5px rgba(0, 0, 0, 0.1);
+    margin: 30px 15px;
+    height: 45px;
+    margin-top: 30px;
+    position: fixed;
+    left: 140px;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.header a.logo {
+    background: #224386;
+    display: block;
+    padding: 0;
+    width: 100px;
+    top: -25px;
+    position: relative;
+    border-radius: 100%;
+}
+
+.navbar {
+    padding: 0;
+    background: #fff !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #224386;
+    display: block;
+    padding: 10px;
+}
+
+.header .form-inline {
+    margin-left: 10px;
+    float: right;
+    position: relative;
+}
+
+.header a.logo img {
+    width: 100%;
+}
+
+
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding-left: 140px;
+    background: #fff;
+    z-index: 0;
+    padding: 10px;
+    position: fixed;
+    padding-left: 150px;
+    z-index: 9;
+    box-shadow: 1px 1px 11px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    font-size: 10px;
+    margin: 0;
+}
+
+.footer a {
+    font-size: 12px;
+    padding: 0px 10px;
+}
+
+.slayt {
+    position: relative;
+    height: 765px;
+    background-color: white;
+    /*box-shadow: inset 0px 2px 0px #2ab7ec, 0px 5px 0px 0px #07526e, 0px 10px 5px #999;*/
+}
+
+.slayt .slaytaciklama {
+    position: absolute;
+    z-index: 1;
+    bottom: 34px;
+    padding: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+.slayt .slaytaciklama h3 {
+    font-size: 2vw !important;
+
+}
+
+.slayt img {
+    z-index: 1;
+    height: 765px;
+    padding: 7px;
+}
+
+.slayt .slaytaciklama h2 {
+    font-weight: 900;
+    font-size: 50px;
+}
+
+.slayt .slaytaciklama p {
+    margin: 0;
+}
+
+.slayt .slaytaciklama a {
+    background-color: #224386;
+    color: #fff;
+    padding: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out
+}
+
+.Kutular {
+}
+
+.Kutular .Kutu {
+    height: 140px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    border: 0px solid #07a4e6;
+    border-radius: 2px;
+    cursor: pointer;
+    display: block;
+    box-shadow: inset 0px 0px 0px #2ab7ec, 0px 0px 0px 0px #07526e, 0px 3px 5px #999;
+    background-image: url("../../img/menu.png") !important;
+}
+
+.Kutular .Kutu:hover {
+    /*box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #07526e, 0px 5px 3px #999;*/
+    top: 3px;
+}
+
+.Kutular .Kutu.KutuBg {
+    /* background: rgb(0, 172, 238); */
+    /* background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(34, 68, 131, 1) 100%); */
+    /* box-shadow: inset 0px 2px 0px #2ab7ec, 0px 5px 0px 0px #07526e, 0px 10px 5px #999; */
+    /* background: #109bce !important; */
+    background:  #04330f !important;
+}
+
+.Kutular .Kutu.KutuBg:hover {
+    background: rgb(18, 165, 52) !important;
+    box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #07526e, 0px 5px 3px #999;
+    top: 3px;
+}
+
+.Kutular .Kutu.Kesinti {
+    background: rgb(25, 177, 129);
+    background: rgb(238, 0, 11) !important;
+}
+
+.Kutular .Kutu.Kesinti:hover {
+    background: rgb(238, 0, 11) !important;
+}
+
+.Kutular .Kutu p {
+    margin: 0;
+}
+
+.Kutular .Kutu.KutuBg p {
+    font-size: 18px;
+    z-index: 1;
+    position: relative;
+}
+
+.Kutular .Kutu i {
+    font-size: 45px;
+    z-index: 1;
+}
+
+.Kutular .Kutu small {
+}
+
+.Kutular .Kutu .KutuYazi {
+    background: rgba(40, 172, 71, 0.6);
+    padding: 10px;
+    color: #fff;
+    line-height: 15px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.Kutular .Kutu .Animasyon {
+    position: absolute;
+    bottom: 0px;
+    width: 16400px;
+    opacity: 1;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    z-index: 0;
+}
+
+.Kutular .Kutu .Animasyon .Ust {
+    width: 100%;
+    height: 30px;
+    background-image: url(../img/water-top.png);
+    background-repeat: repeat-x;
+    animation: watertop 6s linear infinite;
+}
+
+
+@keyframes watertop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-1950px);
+    }
+}
+
+.Kutular2 {
+    padding-top: 20px;
+}
+
+.icsayfa .sayfaust {
+    font-size: 30px;
+    color: #224386;
+    border-bottom: 1px solid #f0f1f3;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.icsayfa .sayfaicerik {
+}
+
+.icsayfa .galeri img {
+    width: 100%;
+}
+
+.yanhaber {
+    overflow: scroll;
+}
+
+.yanhaber div.sabit {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, .04), 0 1px 6px rgba(0, 0, 0, .04);
+    transition: all 0.2s;
+}
+
+.yanhaber h5 {
+    font-size: 22px;
+    background: #238be6;
+    padding: 10px;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.yanhaber .haberkutu {
+    width: 100%;
+    margin-bottom: 10px;
+    margin: 10px;
+    display: block;
+    border-bottom: 1px solid;
+    color: #999;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.yanhaber .haberkutu:last-child {
+    border-bottom: none;
+}
+
+.yanhaber .haberkutu:hover {
+    color: #333;
+}
+
+.yanhaber .haberkutu img {
+    width: 100%;
+}
+
+.yanhaber .haberkutu h3 {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.Bilgilendirme {
+    margin-top: 20px;
+    background-image: url("../../img/bilgibg.jpg");
+    padding: 10px 0;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    box-shadow: inset 0px 2px 0px #2ab7ec, 0px 5px 0px 0px #07526e, 0px 10px 5px #999;
+}
+
+.Bilgilendirme .BilgiBlok {
+    text-align: center;
+}
+
+.Bilgilendirme .BilgiBlok i {
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.Bilgilendirme .BilgiBlok p.Rakam {
+    font-size: 25px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.Bilgilendirme .BilgiBlok p.Aciklama {
+    font-size: 12px;
+    margin: 0;
+}
+
+.icsayfa {
+    margin-bottom: 16px;
+    padding: 5px;
+    background: #fff;
+}
+
+.SayfaResim {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #ccc;
+}
+
+.SayfaResim .galeri:hover {
+    background: #007bff;
+}
+
+.SayfaResim .galeri {
+    display: block;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #007bff;
+}
+
+.youtube {
+}
+
+.youtube h3 {
+    font-size: 18px;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.youtube p {
+    font-size: 12px;
+    color: #333;
+}
+
+.dropdown-menu {
+    padding: 0;
+    z-index: 99999;
+}
+
+.Popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1051;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.Popup a.PopupKapat {
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+.Popup .PopupIcerik {
+    position: absolute;
+    right: 10%;
+    left: 10%;
+    /* background: #fff; */
+    top: 10%;
+    bottom: 10%;
+    margin: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.Popup .PopupIcerik iframe {
+    width: 100%;
+    height: 700px;
+}
+
+.Popup .PopupIcerik h2.Baslik {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin: 0;
+    display: none;
+}
+
+.carousel-indicators {
+    z-index: 9 !important;
+}
+
+.galeri {
+    display: block;
+    /*background: #f5f4f4;*/
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 0;
+    border:none;
+    /*border: 2px solid;*/
+}
+
+.galeri.dosyalar {
+    position: relative;
+    height: 90px;
+}
+
+.galeri.dosyalar img {
+    width: 50px;
+    float: left;
+}
+
+.galeri.dosyalar .textblok {
+    margin-left: 60px;
+}
+
+.galeri.dosyalar .textblok h5 {
+    margin: 0 !important;
+}
+
+.galeri.dosyalar .textblok p {
+    font-size: 12px;
+}
+
+.galeri img {
+    width: 100%;
+}
+
+.slick-next:before, .slick-prev:before {
+    color: black;
+}
+
+#galeri_img:hover,
+#galeri_img:focus {
+    transform: scale(1.1);
+}
+
+#galeri_img {
+    width: initial;
+    border: .5rem solid #fefefe;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+    height: 216px;
+}
+
+.manset_image {
+    width: 36%;
+    margin-right: 12px;
+    border: 9px solid #fff;
+    background-color: #ebebeb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+}
+
+.haberTarih {
+    display: block;
+    font-size: 12px;
+}
+
+.yonetim {margin-bottom: 100px;}
+
+.yonetim .birim {
+    height: 200px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+    border: 3px solid #ccc;
+}
+
+.yonetim .birim a.altbirim {
+    width: 100%;
+    padding: 10px;
+    background: #224386;
+    background: linear-gradient(0deg, #224386 0%, #238be6 100%);
+    height: auto;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    padding-top: 0;
+}
+
+.yonetim .birim a.altbirim img {
+    width: 50px;
+    height: 50px;
+    box-shadow: none;
+    border: 2px solid #fff;
+    top: 10px;
+}
+
+.yonetim .birim a.altbirim h5 {
+    margin-left: 55px;
+    font-size: 20px;
+    margin-bottom: 0 !important;
+    margin-top: 10px;
+    background: transparent;
+    color: #fff;
+}
+
+.yonetim .birim a.altbirim p {
+    margin-left: 55px;
+    font-size: 12px;
+    margin-bottom: 0 !important;
+    background: transparent;
+    color: #fff;
+    margin-top: -10px;
+    position: relative;
+    display: block;
+}
+
+.yonetim .birim a {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    color: #000;
+    height: 180px;
+}
+
+.yonetim .birim a img {
+    width: 150px;
+    border-radius: 100%;
+    height: 150px;
+    float: left;
+    top: 20px;
+    position: absolute;
+    border: 5px solid #fff;
+    box-shadow: 0 0 6px 9px rgba(0, 0, 0, .5);
+}
+
+.yonetim .birim a h5 {
+    margin-top: 50px;
+    margin-left: 160px;
+    font-size: 27px;
+    font-weight: 700;
+    background: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.yonetim .birim a p {
+    margin-top: 0px;
+    margin-left: 160px;
+    font-size: 17px;
+    font-weight: 700;
+    background: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+}
+
+.yonetim .kadrobirim {
+    width: 100%;
+    padding: 10px;
+    background: #224386;
+    background: linear-gradient(0deg, #224386 0%, #238be6 100%);
+    height: auto;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    display: block;
+    margin-top: 50px;
+    z-index: 2;
+    position: relative;
+}
+
+.yonetim .statu .kadrobirim {
+    background: #92d3ed;
+    /* background: linear-gradient(0deg, #224386 0%, #238be6 100%); */
+    box-shadow: none;
+    color: #000 !important;
+}
+
+.yonetim .statu .kadrobirim h5 {
+    color: #333;
+}
+
+.yonetim .statu .kadrobirim p {
+    color: #333;
+}
+
+.yonetim .kadrobirim img {
+    width: 50px;
+    border-radius: 100%;
+    height: 50px;
+    float: left;
+    top: 10px;
+    position: absolute;
+    border: 2px solid #fff;
+}
+
+.yonetim .kadrobirim h5 {
+    margin-top: 0px;
+    margin-left: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 5px;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0;
+    color: #fff;
+    padding-bottom: 0;
+}
+
+.yonetim .kadrobirim p {
+    margin-top: 0px;
+    margin-left: 60px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 5px;
+    display: inline-block;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.yonetim .kadrobirimliste {
+    background: #fafafa;
+    margin-right: 20px;
+    margin-left: 20px;
+    top: -10px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, .5);
+    padding: 30px 10px 10px 10px;
+    border-radius: 10px;
+}
+
+.yonetim .kadrobirimliste div {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    margin: 5px;
+    padding-bottom: 5px;
+}
+
+.childrenbirimudur {
+    margin: 0 !important;
+    padding: 10px;
+    padding-left: 30px;
+    opacity: 0.8;
+}
+
+.childrenbirimudur a {
+    border-bottom: 1px solid #ccc;
+    display: block;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+}
+
+.childrenbirimudur a:last-child {
+    border-bottom: 0;
+}
+
+.yonetim .kadrobirimliste div a {
+    color: #333;
+}
+
+.yonetim .kadrobirimliste div:last-child {
+    border-bottom: none;
+}
+
+.icyanmenu {
+    padding: 10px;
+    margin-top: 0;    
+    /*border: 1px solid #224386;*/
+    margin-bottom: 60px;
+    background-color:white;
+}
+
+.icyanmenu h5 {
+    text-align: center;
+    background: #224386;
+    padding: 5px;
+    color: #fff;
+}
+
+.icyanmenu a {
+    display: block;
+    color: #000;
+    padding: 10px 5px;
+    border-bottom: 1px solid;
+    font-size: 14px;
+}
+
+.icyanmenu a:last-child {
+    border-bottom: 0;
+}
+
+.icyanmenu i {
+    color: #224386;
+    font-size: 14px;
+}
+
+
+
+@media only screen and (max-width: 1450px) and (min-width: 1281px) {
+.Kutular div div:nth-child(1) 
+.Kutu, 
+.Kutular div div:nth-child(2) 
+.Kutu {
+    height: 140px;
+}
+
+.Kutular .Kutu .KutuYazi {
+    font-size: 13px;
+}
+
+
+.slayt {
+    height: 576px;
+}
+
+.slayt img {
+    height: 576px;
+}
+
+.Kutular .Kutu {
+    height: 90px;
+    padding: 10px;
+}
+
+.yanmenu ul li a {
+    padding: 2px 0;
+}
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 1280px) and (min-width: 1199px) {
+
+.Kutular div div:nth-child(1) .Kutu,.Kutular div div:nth-child(2) .Kutu {height: 140px;}
+.Kutular .Kutu .KutuYazi{
+    font-size: 13px;
+}
+
+
+.slayt {
+    height: 576px;
+}
+
+.slayt img {
+    height: 576px;
+}
+
+.Kutular .Kutu {
+    height: 90px;
+    padding: 10px;
+}
+
+.yanmenu ul li a {
+    padding: 2px 0;
+}
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 1010px) and (min-width: 600px) {
+
+    .slayt {
+        height: 575px;
+    }
+
+    .slayt img {
+        height: 575px;
+    }
+    .Kutular .Kutu{
+        height: 85px;
+        padding: 10px;
+        font-size: 12px;
+    }
+    .yanmenu ul li a{
+        padding: 2px 0;
+    }
+    .Kutular .Kutu i {
+        font-size: 35px;
+        z-index: 1;
+    }
+    .Kutular .Kutu.KutuBg p{
+        font-size: 14px;
+    }
+    .navbar-light .navbar-nav .nav-link{
+        font-size: 14px;
+        padding: 10px 6px;
+    }
+    .header a.logo {
+        width: 80px;
+        left: -20px;
+        top: -18px;
+    }
+}
+.childrenbirim{
+    display: block;
+    background: #92d3ed;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.yonetim .kadrobirimliste .childrenbirimudur .childrenbirim {
+    background: transparent;
+}
+.childrenbirim span{
+    display: block;
+    color: #000;
+    font-weight: bold;
+}
+.childrenbirim small{
+    display: block;
+    color: #333;
+}
+.jstree-icon.jstree-themeicon.jstree-themeicon-custom{background-size: cover !important;border-radius: 100%;width: 45px !important;height: 44px !important;}
+.jstree-anchor p.treetasarim{
+    display: inline-block;
+    margin: 0;
+    padding-left: 5px;
+}
+
+.demo.jstree {
+    width: 100%;
+    padding: 10px;
+    overflow: auto;
+}
+.jstree-anchor p.treetasarim span.isim{
+    display: block;
+}
+.jstree-anchor p.treetasarim span.unvan{
+    display: block;
+    font-size: 12px;
+    line-height: 10px;
+}
+.sosyalag i{
+    font-size: 21px;
+    top: 0;
+    position: relative;
+}
+.sosyalag.facebook i{
+    color: #3b5998;
+}
+.sosyalag.twitter i{
+    color: #1da1f2;
+}
+.sosyalag.instagram i{
+    color: #833ab4;
+}
+.sosyalag.youtube i{
+    color: #ff0000;
+}
+.d-xs{
+display:none !important
+}
